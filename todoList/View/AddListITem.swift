@@ -15,12 +15,12 @@ struct AddListITem: View {
     @EnvironmentObject var listViewModel : ListViewModel
     @State private var birthDate = Date()
     
-    var dateFormatter: String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        return formatter.string(from: birthDate)
-       }
+//    var dateFormatter: String {
+//        let formatter = DateFormatter()
+//        formatter.dateStyle = .medium
+//        formatter.timeStyle = .short
+//        return formatter.string(from: birthDate)
+//       }
     var body: some View {
         ScrollView(content: {
             VStack(content: {
@@ -31,15 +31,13 @@ struct AddListITem: View {
                     .cornerRadius(15)
                 
                     DatePicker(selection: $birthDate,
-                               in: ...Date(),
-                                displayedComponents: [.date, .hourAndMinute]
-
+                        displayedComponents: [.date, .hourAndMinute]
                     ) {
                         Text("Add Date Time")
                             .font(.system(size: 15,weight: .medium,design: .rounded))
                             
                     }
-                    .datePickerStyle(.compact)
+//                    .datePickerStyle(.compact)
                     .environment(\.locale, .init(identifier: "en"))
                 Button(
                    action:saveButtonPressed,
@@ -64,7 +62,7 @@ struct AddListITem: View {
     
     func saveButtonPressed() {
         if textIsApprorpriate() {
-            listViewModel.addItem(title: text,dateTime: dateFormatter)
+            listViewModel.addItem(title: text,dateTime: birthDate)
             presentationModel.wrappedValue.dismiss()
         }
     }

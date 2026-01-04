@@ -41,7 +41,6 @@ struct NoItemsView: View {
                    .offset(y: isAnimate ? -7 : 0)
             })
             .multilineTextAlignment(.center)
-//            .frame(minWidth: 400)
             .padding(30)
             .onAppear(perform: addAnimateion)
         })
@@ -50,9 +49,9 @@ struct NoItemsView: View {
     
     func addAnimateion(){
         guard !isAnimate else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5 ){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2 ){
             withAnimation(
-                Animation.easeInOut(duration: 2.0)
+                Animation.easeInOut(duration: 3.0)
                     .repeatForever()
             ){
                 isAnimate.toggle()

@@ -36,10 +36,11 @@ class ListViewModel : ObservableObject {
         items.move(fromOffsets: from, toOffset: to)
     }
     
-    func addItem(title: String,dateTime : String){
+    func addItem(title: String,dateTime : Date){
         let newItem = ItemListModel(title: title, isCompleted: false,dateTime: dateTime)
         
         items.append(newItem)
+        NotificationManager.shared.schedule(todo: newItem)
     }
     
     func updateItem(item : ItemListModel) {

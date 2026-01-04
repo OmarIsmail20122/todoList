@@ -20,14 +20,17 @@ struct HeadListRow: View {
                 Text(item.title)
                     .font(.title)
             })
-                Text("\(item.dateTime)")
+                Text(item.dateTime.formatted(
+                    Date.FormatStyle()
+                        .locale(Locale(identifier: "en_US"))
+                ))
         })
     }
 }
 
 struct HeadListRow_Previews: PreviewProvider {
-    static var item1 = ItemListModel(title: "This is first Title!", isCompleted: true,dateTime: "\(Date.now)")
-    static var item2 = ItemListModel(title: "This is Second Title!", isCompleted: false,dateTime: "\(Date.now)")
+    static var item1 = ItemListModel(title: "This is first Title!", isCompleted: true,dateTime: Date.now)
+    static var item2 = ItemListModel(title: "This is Second Title!", isCompleted: false,dateTime: Date.now)
     
     static var previews: some View {
         Group(content: {

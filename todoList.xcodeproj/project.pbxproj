@@ -20,6 +20,7 @@
 		046850EA2C44EC020051DBB5 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046850E92C44EC020051DBB5 /* ListViewModel.swift */; };
 		046850ED2C471B860051DBB5 /* NoItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046850EC2C471B860051DBB5 /* NoItemsView.swift */; };
 		046850EF2C4725050051DBB5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046850EE2C4725050051DBB5 /* Launch Screen.storyboard */; };
+		5270147A2F0A6A49004B57C9 /* NotifiationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527014792F0A6A49004B57C9 /* NotifiationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		046850E92C44EC020051DBB5 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		046850EC2C471B860051DBB5 /* NoItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemsView.swift; sourceTree = "<group>"; };
 		046850EE2C4725050051DBB5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		527014792F0A6A49004B57C9 /* NotifiationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		0446FC242C14922600BB45AD /* todoList */ = {
 			isa = PBXGroup;
 			children = (
+				527014782F0A6A3B004B57C9 /* Manager */,
 				046850E82C44EBEF0051DBB5 /* viewModel */,
 				046850E52C4432880051DBB5 /* Model */,
 				046850DE2C44225F0051DBB5 /* View */,
@@ -169,6 +172,14 @@
 				046850E92C44EC020051DBB5 /* ListViewModel.swift */,
 			);
 			path = viewModel;
+			sourceTree = "<group>";
+		};
+		527014782F0A6A3B004B57C9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				527014792F0A6A49004B57C9 /* NotifiationManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 			files = (
 				0446FC262C14922600BB45AD /* todoListApp.swift in Sources */,
 				046850E02C4422830051DBB5 /* ListView.swift in Sources */,
+				5270147A2F0A6A49004B57C9 /* NotifiationManager.swift in Sources */,
 				046850EA2C44EC020051DBB5 /* ListViewModel.swift in Sources */,
 				046850E22C44287F0051DBB5 /* AddListITem.swift in Sources */,
 				046850E72C4432990051DBB5 /* ListModel.swift in Sources */,

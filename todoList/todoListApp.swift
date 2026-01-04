@@ -11,8 +11,10 @@ import CoreData
 
 @main
 struct todoListApp: App {
-//    let persistenceController = PersistenceController.shared
-  @StateObject  var listViewModel : ListViewModel = ListViewModel()
+  @StateObject  var listViewModel : ListViewModel = ListViewModel()    
+    init() {
+        NotificationManager.shared.requestPeemission()
+    }
     var body: some Scene {
         WindowGroup {
             NavigationView{

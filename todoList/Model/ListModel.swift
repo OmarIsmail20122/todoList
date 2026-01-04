@@ -11,9 +11,9 @@ struct ItemListModel : Identifiable , Codable {
     let id : String
     let title : String
     let isCompleted : Bool
-    let dateTime : String
+    let dateTime : Date
     
-    init(id : String = UUID().uuidString ,title: String, isCompleted: Bool, dateTime : String) {
+    init(id : String = UUID().uuidString ,title: String, isCompleted: Bool, dateTime : Date) {
         self.id = id
         self.title = title
         self.isCompleted = isCompleted
